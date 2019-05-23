@@ -8,12 +8,10 @@ document.onkeydown = function(event) {
 var keyPress = (String.fromCharCode(event.keyCode)).toLowerCase();
     addLetter(keyPress);
 }
-
 function showLettersGuessed() {
     var placeHolder = guesses.join(", ");
     document.getElementById("guessedLetters").innerHTML = placeHolder;
 }
-
 function guessMatch (character) {
     console.log(character);
     console.log(computerGuess);
@@ -30,7 +28,6 @@ function guessMatch (character) {
         showGuessesRemaining();
     }
 }
-
 function addLetter (usersKeypress) {
     guesses.push(usersKeypress);
     console.log(guesses);
@@ -38,29 +35,23 @@ function addLetter (usersKeypress) {
     guessMatch(usersKeypress);
     
 }
-
 function showWins() {
     document.getElementById("wins").innerHTML = wins;
 }
-
 function showLosses() {
     document.getElementById("losses").innerHTML = losses;
 }
-
 function showGuessesRemaining() {
     document.getElementById("guesses").innerHTML = guessesLeft;
 }
-
 function resetVariables () {
     guesses = [];
     guessesLeft = 10;
 }
-
 function startGame() {
     showGuessesRemaining();
     showWins();
     showLosses();
 }
-
 startGame();
 
