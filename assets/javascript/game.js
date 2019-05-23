@@ -10,8 +10,8 @@ var keyPress = (String.fromCharCode(event.keyCode)).toLowerCase();
 }
 
 function showLettersGuessed() {
-    var tempStr = guesses.join(", ");
-    document.getElementById("guessedLetters").innerHTML = tempStr;
+    var placeHolder = guesses.join(", ");
+    document.getElementById("guessedLetters").innerHTML = placeHolder;
 }
 
 function guessMatch (character) {
